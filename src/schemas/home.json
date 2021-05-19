@@ -1,0 +1,133 @@
+{
+  "Main" : {
+    "body1" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "navbar" : [ ],
+          "bienvenido" : [ ],
+          "que_es_la_sidra" : [ ]
+        },
+        "choices" : {
+          "navbar" : {
+            "type" : "Slice",
+            "fieldset" : "NavBar",
+            "description" : "5 page categories with links",
+            "icon" : "face",
+            "display" : "list",
+            "non-repeat" : {
+              "background_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ {
+                    "name" : "mobile",
+                    "width" : null,
+                    "height" : null
+                  } ],
+                  "label" : "Background Image"
+                }
+              }
+            },
+            "repeat" : {
+              "label_link" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Label Link"
+                }
+              },
+              "link" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Link"
+                }
+              }
+            }
+          },
+          "bienvenido" : {
+            "type" : "Slice",
+            "fieldset" : "Bienvenido",
+            "description" : "First Module \"Welcoming style\"",
+            "icon" : "face",
+            "display" : "list",
+            "non-repeat" : {
+              "background_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Background Image"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title"
+                }
+              },
+              "quote" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label" : "Quote"
+                }
+              }
+            },
+            "repeat" : {
+              "label_link" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Label Link"
+                }
+              },
+              "link" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Link"
+                }
+              }
+            }
+          },
+          "que_es_la_sidra" : {
+            "type" : "Slice",
+            "fieldset" : "Que es la sidra",
+            "description" : "Image left, title and body right",
+            "icon" : "face",
+            "display" : "list",
+            "non-repeat" : {
+              "background_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Background Image"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title"
+                }
+              },
+              "text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label" : "Text"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}
