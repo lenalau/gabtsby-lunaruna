@@ -17,12 +17,13 @@ module.exports = {
             resolve: `gatsby-source-prismic`,
             options: {
                 repositoryName: 'lunaruna',
+                prismicToolbar: true,
                 accessToken: process.env.PRISMIC_ACCESS_TOKEN,
 
                 // linkResolver: () => prismicLinkResolver,
                 schemas: {
                     home: require("./src/schemas/home.json"),
-                    about_page: require("./src/schemas/about-page.json")
+                    sidraartesanal: require("./src/schemas/sidraartesanal.json")
                 }
             }
         }

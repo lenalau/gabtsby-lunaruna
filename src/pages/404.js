@@ -1,5 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { withUnpublishedPreview } from 'gatsby-source-prismic'
+import SidraArtesanal from '../pages/sidra-artesanal'
+import { Helmet } from "react-helmet";
 
 // styles
 const pageStyles = {
@@ -28,6 +31,8 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
+      <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
+      </Helmet>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
@@ -51,4 +56,11 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+export default withUnpublishedPreview(NotFoundPage, {
+  templateMap: {
+    sidraartesanal: SidraArtesanal,
+    prismicSidraartesanal: SidraArtesanal,
+
+  },
+
+})

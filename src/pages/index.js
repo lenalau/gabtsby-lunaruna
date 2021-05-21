@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import getSlices from '../utils/slices'
 // import SEO from '../components/seo'
 import '../../global.css'
+import { Helmet } from "react-helmet";
+
 export default function Home({ data }) {
   const {
     prismicHome: {
@@ -12,18 +14,14 @@ export default function Home({ data }) {
 
   return <div className="w-screen">{slices.map((slice, key) => (
     <React.Fragment key={key}>
+      <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
+      </Helmet>
       {/* <SEO title="Home" /> */}
       {slice}
     </React.Fragment>))}
   </div>
 }
 
-// (
-//   <div>
-//     {/* <h1>{title}</h1>
-//     <p>{body}</p> */}
-//   </div>
-// )
 export const query = graphql`
  query HomepageQuery { 
   prismicHome{
@@ -62,6 +60,7 @@ export const query = graphql`
               }
               quote {
                 raw
+                text
               }
               background_image {
                 alt
@@ -79,6 +78,7 @@ export const query = graphql`
           }
           ... on PrismicHomeBody1QueEsLaSidra {
             id
+            slice_type
             primary {
               background_image {
                 alt

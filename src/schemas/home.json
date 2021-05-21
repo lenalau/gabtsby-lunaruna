@@ -99,7 +99,6 @@
             "fieldset" : "Que es la sidra",
             "description" : "Image left, title and body right",
             "icon" : "face",
-            "display" : "list",
             "non-repeat" : {
               "background_image" : {
                 "type" : "Image",
