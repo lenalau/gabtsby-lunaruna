@@ -17,8 +17,8 @@ export default function Home({ data }) {
 
   return <div className="w-screen">
     <div id="landing" className="">
-      <div className="mx-auto py-12 md:py-20 md:w-1/2">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 text-center md:text-left">Bienvenido...</h1>
+      <div className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 text-center uppercase">¡Bienvenido!</h1>
 
         <div className="grid">
           <div className=" my-6 md:my-12 flex flex-col">
@@ -39,12 +39,12 @@ export default function Home({ data }) {
             <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-yellow-150">
 
               {/* </div> */}
-              <div className="grid flex-col justify-items-center md:justify-items-end uppercase">
+              <div className="grid flex-col justify-items-center uppercase">
                 <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA</p>
                 <p className="text-4xl md:text-5xl lg:text-6xl">próximamente!</p>
               </div>
             </div>
-            <div className="grid justify-items-center md:justify-items-start">
+            <div className="grid justify-items-center">
               <p className="text-xl md:text-xl lg:text-2xl font-bold text-yellow-150 pb-2 md:pb-6 ">Contacto:</p>
 
               <div className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
