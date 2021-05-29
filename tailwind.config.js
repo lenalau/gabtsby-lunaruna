@@ -13,8 +13,11 @@ module.exports = {
         },
         brown: {
           '800': '#321A18'
+        },
+        black: {
+          '800': '#252B42'
         }
-      }
+      },
     }
   },
   plugins: []

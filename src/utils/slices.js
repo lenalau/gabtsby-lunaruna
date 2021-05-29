@@ -4,6 +4,9 @@ import renderQueSidra from './sliceRenderers/renderQueSidra'
 import renderNuestrosProductos from './sliceRenderers/renderNuestrosProductos'
 import renderPuntos from './sliceRenderers/renderPuntos'
 import renderOfertas from './sliceRenderers/renderOfertas'
+import renderRecetas from './sliceRenderers/renderRecetas'
+import renderNosotros from './sliceRenderers/renderNosotros'
+import renderContacto from './sliceRenderers/renderContacto'
 
 export default function getSlices(data) {
     if (!data) {
@@ -26,6 +29,12 @@ export default function getSlices(data) {
                 return renderPuntos(element.primary, element.items)
             case 'ofertas_actuales':
                 return renderOfertas(element.primary, element.items)
+            case 'recetas_con_sidra':
+                return renderRecetas(element.primary, element.items)
+            case 'nosotros':
+                return renderNosotros(element.primary, element.items)
+            case 'contacto':
+                return renderContacto(element.primary, element.items)
             default:
                 return null
         }

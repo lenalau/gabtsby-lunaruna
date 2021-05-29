@@ -7,7 +7,10 @@
         "labels": {
           "nuestros_productos": [],
           "puntos_de_venta": [],
-          "ofertas_actuales": []
+          "ofertas_actuales": [],
+          "recetas_con_sidra": [],
+          "nosotros": [],
+          "contacto": []
         },
         "choices": {
           "navbar": {
@@ -315,6 +318,177 @@
                 "config": {
                   "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                   "label": "text"
+                }
+              }
+            }
+          },
+          "recetas_con_sidra": {
+            "type": "Slice",
+            "fieldset": "Recetas Con Sidra",
+            "description": "repeatable title text background image",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "nav_item": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Nav Item"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              }
+            },
+            "repeat": {
+              "background_image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "background image"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "text",
+                  "placeholder": "first you can put a list then the steps"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              }
+            }
+          },
+          "nosotros": {
+            "type": "Slice",
+            "fieldset": "Nosotros",
+            "description": "image title subtitle text",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "nav_item": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Nav Item"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              },
+              "subtitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "subtitle"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "text"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "contacto": {
+            "type": "Slice",
+            "fieldset": "contacto",
+            "description": "title, map, repeatable items",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "nav_item": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Nav Item"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              },
+              "map": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "map"
+                }
+              }
+            },
+            "repeat": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "social icon"
+                }
+              },
+              "instagram": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Instagram"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "text"
+                }
+              },
+              "facebook_link": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "facebook link"
+                }
+              },
+              "instagram_link": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "instagram link"
                 }
               }
             }

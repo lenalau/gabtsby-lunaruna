@@ -1,41 +1,88 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import getSlices from '../utils/slices'
+import landingsidra from '../images/landingsidra.jpeg'
+import instagram from '../images/insta.png'
+import facebook from '../images/facebook-icon.png'
+// import getSlices from '../utils/slices'
 // import SEO from '../components/seo'
 import '../../global.css'
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 export default function Home({ data }) {
-  const {
-    prismicHome: {
-      data: { body1 }
-    } } = data
-  const slices = getSlices(body1)
+  // const {
+  //   prismicHome: {
+  //     data: { body1 }
+  //   } } = data
+  // const slices = getSlices(body1)
 
-  return <div className="w-screen">{slices.map((slice, key) => (
-    <React.Fragment key={key}>
-      <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
-      </Helmet>
-      {/* <SEO title="Home" /> */}
-      {slice}
-    </React.Fragment>))}
+  return <div className="w-screen">
+    <div id="landing" className="">
+      <div className="mx-auto py-12 md:py-20 md:w-1/2">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 text-center md:text-left">Bienvenido...</h1>
+
+        <div className="grid">
+          <div className=" my-6 md:my-12 flex flex-col">
+            <img src={landingsidra} alt='botellas de sidra' />
+
+            {/* 
+            <div className="m-auto h-72 w-full"
+              style={{
+                background: `url(${landingsidra})`,
+                backgroundRepeat: `no-repeat`,
+                backgroundSize: `100%`,
+                marginLeft: `0%`,
+                marginRight: `0%`
+              }}
+              alt='Botellas de Sidra'
+            > */}
+
+            <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-yellow-150">
+
+              {/* </div> */}
+              <div className="grid flex-col justify-items-center md:justify-items-end uppercase">
+                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA</p>
+                <p className="text-4xl md:text-5xl lg:text-6xl">próximamente!</p>
+              </div>
+            </div>
+            <div className="grid justify-items-center md:justify-items-start">
+              <p className="text-xl md:text-xl lg:text-2xl font-bold text-yellow-150 pb-2 md:pb-6 ">Contacto:</p>
+
+              <div className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
+                <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
+                <a href='https://www.facebook.com/luna_runa_ec-103860901360719' target="_blank" rel="noreferrer"> <img src={facebook} alt='facebook' className=" h-8 md:h-16" /></a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* {slices.map((slice, key) => (
+      <React.Fragment key={key}>
+        <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
+        </Helmet>
+              {/* <SEO title="Home" /> */}
+    {/* {slice}
+      </React.Fragment>
+    ))}  */}
   </div>
 }
 
 export const query = graphql`
- query HomepageQuery { 
-  prismicHome{
-      data {
-        body1 {
-          ... on PrismicHomeBody1Navbar {
-            id
+ query HomepageQuery {
+              prismicHome{
+              data {
+              body1 {
+              ...on PrismicHomeBody1Navbar {
+              id
             primary {
               background_image {
-                alt
+              alt
                 url
                 thumbnails {
-                  mobile {
-                    url
+              mobile {
+              url
                     alt
                   }
                 }
@@ -43,60 +90,60 @@ export const query = graphql`
             }
             items {
               label_link {
-                text
-              }
+              text
+            }
               link {
-                text
-              }
+              text
+            }
             }
             slice_type
           }
           ... on PrismicHomeBody1Bienvenido {
-            id
+              id
             slice_type
             primary {
               title {
-                text
-              }
+              text
+            }
               quote {
-                raw
+              raw
                 text
               }
               background_image {
-                alt
+              alt
                 url
               }
             }
             items {
               link {
-                text
-              }
+              text
+            }
               label_link {
-                text
-              }
+              text
+            }
             }
           }
           ... on PrismicHomeBody1QueEsLaSidra {
-            id
+              id
             slice_type
             primary {
               background_image {
-                alt
+              alt
                 url
               }
               text {
-                raw
+              raw
                 text
               }
               title {
-                text
-              }
+              text
+            }
             }
           }
         }
       }
     }
-  } 
+  }
 `
 
 // // styles

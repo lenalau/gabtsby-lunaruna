@@ -14,14 +14,15 @@ const SidraArtesanal = ({ data }) => {
     const slices = getSlices(body)
 
     return (
-        <div className="w-screen">{slices.map((slice, i) => (
+        <div className="w-screen">
+            {slices.map((slice, i) => (
 
-            <React.Fragment key={i}>
-                <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
-                </Helmet>
-                {/* <SEO title="Home" /> */}
-                {slice}
-            </React.Fragment>))}
+                <React.Fragment key={i}>
+                    <Helmet> <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=lunaruna"></script>
+                    </Helmet>
+                    {/* <SEO title="Home" /> */}
+                    {slice}
+                </React.Fragment>))}
         </div>)
 }
 
@@ -199,6 +200,101 @@ export const query = graphql`
                     url
                 }
                
+            }
+          }
+
+          ... on PrismicSidraartesanalBodyRecetasConSidra {
+            id
+            slice_type
+            primary {
+              nav_item {
+                  text
+              }
+              title {
+                  text
+              }
+           
+
+            }
+            items {
+                background_image {
+                    alt
+                    url
+                }
+                title {
+                    text
+                }
+                text {
+                  text
+                  raw
+                }                       
+            }
+          }
+
+
+          ... on PrismicSidraartesanalBodyNosotros {
+            id
+            slice_type
+            primary {
+                nav_item {
+                    text
+                  }
+              image {
+                alt
+                url
+              }
+              text {
+                raw
+                text
+              }
+              subtitle {
+                text
+              }
+              title {
+                text
+              }
+            }
+          }
+
+
+          ... on PrismicSidraartesanalBodyContacto {
+            id
+            slice_type
+            primary {
+              nav_item {
+                  text
+              }
+              title {
+                  text
+              }
+              map {
+                alt
+                url
+            }
+
+            }
+            items {
+                title {
+                    text
+                }
+                text {
+                  text
+                  raw
+                }  
+                icon {
+                    alt
+                    url
+                } 
+                instagram {
+                    alt
+                    url
+                } 
+                facebook_link {
+text
+                }                
+                instagram_link {
+text
+                }
             }
           }
 
