@@ -18,7 +18,7 @@ export default function Home({ data }) {
   return <div className="w-screen">
     <div className="">
       <div className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido!</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido...</h1>
 
         <div className="grid">
           <div className=" my-6 md:my-12 flex flex-col">
@@ -40,8 +40,8 @@ export default function Home({ data }) {
 
               {/* </div> */}
               <div className="grid flex-col justify-items-center uppercase">
-                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA</p>
-                <p className="text-4xl md:text-5xl lg:text-6xl">próximamente!</p>
+                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA...</p>
+                <p className="text-4xl md:text-5xl lg:text-6xl">...próximamente!</p>
               </div>
             </div>
             <div className="grid justify-items-center">
