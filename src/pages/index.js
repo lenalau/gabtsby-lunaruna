@@ -16,7 +16,7 @@ export default function Home({ data }) {
   // const slices = getSlices(body1)
 
   return <div className="w-screen">
-    <div id="landing" className="">
+    <div className="">
       <div className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido!</h1>
 
@@ -47,7 +47,7 @@ export default function Home({ data }) {
             <div className="grid justify-items-center">
               <p className="text-xl md:text-xl lg:text-2xl font-bold text-white pb-2 md:pb-6 ">Contacto:</p>
 
-              <div className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
+              <div id="landing" className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
                 <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
                 <a href='https://www.facebook.com/luna_runa_ec-103860901360719' target="_blank" rel="noreferrer"> <img src={facebook} alt='facebook' className=" h-8 md:h-16" /></a>
               </div>
