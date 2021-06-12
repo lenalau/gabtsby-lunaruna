@@ -9,7 +9,7 @@ module.exports = {
         description: '',
         siteUrl: 'https://lunaruna.com', // No trailing slash allowed!,
         url: 'lunaruna.com', // No trailing slash allowed!, 
-        image: ''
+        image: './src/images/Logo.jpeg'
     },
     plugins: [
         `gatsby-plugin-postcss`,

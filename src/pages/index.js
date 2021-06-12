@@ -40,14 +40,14 @@ export default function Home({ data }) {
 
               {/* </div> */}
               <div className="grid flex-col justify-items-center uppercase">
-                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA...</p>
-                <p className="text-4xl md:text-5xl lg:text-6xl">...próximamente!</p>
+                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA!</p>
+                <p className="text-4xl md:text-5xl lg:text-6xl">próximamente...</p>
               </div>
             </div>
             <div className="grid justify-items-center">
               <p className="text-xl md:text-xl lg:text-2xl font-bold text-white pb-2 md:pb-6 ">Contacto:</p>
 
-              <div id="landing" className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
+              <div id="landing" className="grid grid-cols-2 md:w-1/4 md:h-auto">
                 <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
                 <a href='https://www.facebook.com/luna_runa_ec-103860901360719' target="_blank" rel="noreferrer"> <img src={facebook} alt='facebook' className=" h-8 md:h-16" /></a>
               </div>
