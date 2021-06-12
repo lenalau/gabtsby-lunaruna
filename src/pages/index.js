@@ -18,7 +18,7 @@ export default function Home({ data }) {
   return <div className="w-screen">
     <div id="landing" className="">
       <div className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 text-center uppercase">¡Bienvenido!</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido!</h1>
 
         <div className="grid">
           <div className=" my-6 md:my-12 flex flex-col">
@@ -36,7 +36,7 @@ export default function Home({ data }) {
               alt='Botellas de Sidra'
             > */}
 
-            <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-yellow-150">
+            <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-white">
 
               {/* </div> */}
               <div className="grid flex-col justify-items-center uppercase">
@@ -45,7 +45,7 @@ export default function Home({ data }) {
               </div>
             </div>
             <div className="grid justify-items-center">
-              <p className="text-xl md:text-xl lg:text-2xl font-bold text-yellow-150 pb-2 md:pb-6 ">Contacto:</p>
+              <p className="text-xl md:text-xl lg:text-2xl font-bold text-white pb-2 md:pb-6 ">Contacto:</p>
 
               <div className="grid grid-cols-2 md:w-1/4 md:h-auto space-x-2 md:space-x-4">
                 <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
