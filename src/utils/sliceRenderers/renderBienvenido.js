@@ -21,14 +21,14 @@ export default function Bienvenido(primary, items) {
                 alt={imageAlt}
             >
                 <div className="">
-                    <div className="mx-auto w-4/5 text-4xl md:text-5xl lg:text-6xl font-bold   pt-12 pb-12 md:pt-20 md:pb-20 text-yellow-150">
+                    <div className="mx-auto w-4/5 text-4xl md:text-5xl lg:text-6xl font-bold   pt-12 pb-4 md:pt-20 md:pb-20 text-yellow-150">
                         <div className="md:w-2/3 ">{title}</div>
                     </div>
-                    <div className="rounded-lg bg-yellow-50 bg-opacity-50 text-white font-bold italic py-12  md:py-20">
+                    <div className="hidden md:flex rounded-lg bg-yellow-50 bg-opacity-50 text-white font-bold italic py-12  md:py-20">
                         <div className="w-4/5 mx-auto ">{quote}</div></div>
 
 
-                    <div className="mx-auto my-12 md:my-20 w-4/5  flex flex-row grid pb-12 md:pb-20 justify-items-end" >
+                    <div className="mx-auto my-4 md:my-20 md:w-4/5  mr-4 md:mr-0 flex flex-row pb-12 md:pb-20 justify-items-start md:justify-items-end" >
 
                         <div className="flex flex-row text-white ">
                             {items.map((item, i) => <a key={i}
