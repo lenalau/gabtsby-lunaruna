@@ -25,7 +25,7 @@ export default function Contacto(primary, items) {
                             const instagram_link = item?.instagram_link.text
 
                             return (
-                                <div key={i}>
+                                <div key={i} id={title}>
                                     <div className="">
                                         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold pt-6 md:pt-12 text-yellow-150">{title}</h3>
 

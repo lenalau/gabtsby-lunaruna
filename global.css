@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: block;
   margin: 0px !important;
@@ -24,10 +28,12 @@ nav {
   height: 8vw;
 }
 .navbar {
-  position: absolute;
+  /* position: absolute; */
+  left: 20%;
+  top: 10%;
   list-style: none;
-  margin-top: 10px;
-  margin-left: 13%;
+  /* margin-top: 10px; */
+  /* margin-left: 13%; */
 }
 
 ul li {
@@ -119,4 +125,15 @@ ul li a {
     /* width: 100vw; */
     height: 600px;
   }
+}
+
+div.sticky {
+  position: sticky;
+  top: 48vh;
+  right: 0;
+  height: 0vh;
+}
+
+div.stickyMenu {
+  margin-top: 2vh;
 }

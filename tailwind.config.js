@@ -16,8 +16,18 @@ module.exports = {
         },
         black: {
           '800': '#252B42'
+        },
+        green: {
+          apple: '#68bc45'
         }
       },
+      spacing: {
+        '21': '21px'
+      },
+      maxWidth: {
+        design: '1200px',
+        small: '87%'
+      }
     }
   },
   plugins: []

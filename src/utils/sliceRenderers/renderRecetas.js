@@ -6,7 +6,7 @@ export default function Recetas(primary, items) {
 
 
     return (
-        <div id={primary?.nav_item.text} className="">
+        <div id="recetas">
             <div className="mx-auto py-12 md:py-20 w-4/5">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150">{primary?.title.text}</h1>
 

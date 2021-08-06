@@ -1,20 +1,47 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import getSlices from '../utils/slices'
 // import SEO from '../components/seo'
 import '../../global.css'
 import { withPreview } from 'gatsby-source-prismic'
 import { Helmet } from "react-helmet";
+import Logo from "../images/Logo.jpeg"
+import arrowUp from "../images/arrowUp.png"
+// import arrowDown from "../images/arrowDown.png"
 
 const SidraArtesanal = ({ data }) => {
+    const { prismicSidraartesanal } = data
     const {
         prismicSidraartesanal: {
             data: { body }
         } } = data
     const slices = getSlices(body)
-
     return (
         <div className="w-screen">
+            <div className="flex justify-end sticky">
+
+                <div className="flex flex-col items-end">
+                    <div className="bg-green-apple bg-opacity-60 pl-4 flex flex-col items-center">
+                        <Link to="#">
+                            <img src={arrowUp} width="25px" className="p-1 pb-2 mr-4" alt="Arrow Up" />
+                        </Link>
+                        <img src={Logo} width="40px" className="pb-2 mr-4" alt="Menu Logo" />
+                        {/* <img src={arrowDown} width="25px" className="p-1 mr-4"></img> */}
+                    </div>
+
+                    <div className="bg-green-apple bg-opacity-60 flex flex-col p-2 mr-4 rounded-md stickyMenu">
+                        <Link to="#quesidra" className="ml-2 text-white hover:text-yellow-50 hover:text-opacity-60">{prismicSidraartesanal.data.navigation_1.text}</Link>
+                        <Link to="#nuestros" className="ml-2 text-white hover:text-yellow-50">{prismicSidraartesanal.data.navigation_2.text}</Link>
+                        <Link to="#recetas" className="ml-2 text-white hover:text-yellow-50">{prismicSidraartesanal.data.navigation_3.text}</Link>
+                        <Link to="#nosotros" className="ml-2 text-white hover:text-yellow-50">{prismicSidraartesanal.data.navigation_4.text}</Link>
+                        <Link to="#contacto" className="ml-2 text-white hover:text-yellow-50">{prismicSidraartesanal.data.navigation_5.text}</Link>
+                        <Link to="#ofertas" className="ml-2 text-white hover:text-yellow-50">OFERTAS SPECIALES</Link>
+                        <Link to="#puntos" className="bg-yellow-50 pl-2 bg-opacity-60 text-white rounded-lg hover:text-green-apple hover:bg-opacity-100">PUNTOS DE VENTA</Link>
+
+                    </div>
+
+                </div>
+            </div>
             {slices.map((slice, i) => (
 
                 <React.Fragment key={i}>
@@ -23,6 +50,7 @@ const SidraArtesanal = ({ data }) => {
                     {/* <SEO title="Home" /> */}
                     {slice}
                 </React.Fragment>))}
+
         </div>)
 }
 
@@ -32,6 +60,21 @@ export const query = graphql`
  query SidraQuery { 
   prismicSidraartesanal{
       data {
+        navigation_1 {
+            text
+          }
+          navigation_2 {
+            text
+          }
+          navigation_3 {
+            text
+          }
+          navigation_4 {
+            text
+          }
+          navigation_5 {
+            text
+          }
         body {
           ... on PrismicSidraartesanalBodyNavbar {
             id

@@ -15,16 +15,15 @@ export default function Home({ data }) {
   //   } } = data
   // const slices = getSlices(body1)
 
-  return <div className="w-screen">
-    <div className="">
-      <div id="landing" className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido...</h1>
+  return <div className="max-w-percentage md:max-w-design">
+    <div id="landing" className="mx-auto py-12 md:py-20 w-4/5 md:w-1/2">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center uppercase">¡Bienvenido...</h1>
 
-        <div className="grid">
-          <div className=" my-6 md:my-12 flex flex-col">
-            <img src={landingsidra} alt='botellas de sidra' />
 
-            {/* 
+      <div className=" my-6 md:my-12 flex flex-col">
+        <img src={landingsidra} alt='botellas de sidra' />
+
+        {/* 
             <div className="m-auto h-72 w-full"
               style={{
                 background: `url(${landingsidra})`,
@@ -36,27 +35,26 @@ export default function Home({ data }) {
               alt='Botellas de Sidra'
             > */}
 
-            <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-white">
+        <div className="py-6 md:py-12 text-xl md:text-xl lg:text-2xl font-bold text-white">
 
-              {/* </div> */}
-              <div className="grid flex-col justify-items-center uppercase">
-                <p className="text-2xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA!</p>
-                <p className="text-4xl md:text-5xl lg:text-6xl">próximamente...</p>
-              </div>
-            </div>
-            <div className="grid justify-items-center">
-              <p className="text-xl md:text-xl lg:text-2xl font-bold text-white pb-2 md:pb-6 ">Contacto:</p>
-
-              <div className="grid grid-cols-2 md:w-1/4 md:h-auto">
-                <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
-                <a href='https://www.facebook.com/luna_runa_ec-103860901360719' target="_blank" rel="noreferrer"> <img src={facebook} alt='facebook' className=" h-8 md:h-16" /></a>
-              </div>
-            </div>
-
-
+          {/* </div> */}
+          <div className="flex flex-col justify-items-center uppercase">
+            <p className="text-xl md:text-2xl lg:text-4xl pb-6 md:pb-12">...AL MUNDO DE LA SIDRA!</p>
+            <p className="text-3xl md:text-5xl lg:text-6xl flex-wrap">próximamente...</p>
           </div>
         </div>
+        <div className="grid justify-items-center">
+          <p className="text-xl md:text-xl lg:text-2xl font-bold text-white pb-2 md:pb-6 ">Contacto:</p>
+
+          <div className="grid grid-cols-2 md:w-1/4 md:h-auto">
+            <a href='https://www.instagram.com/luna_runa_ec/' target="_blank" rel="noreferrer"> <img src={instagram} alt='instagram' className="h-8 md:h-16" /></a>
+            <a href='https://www.facebook.com/luna_runa_ec-103860901360719' target="_blank" rel="noreferrer"> <img src={facebook} alt='facebook' className=" h-8 md:h-16" /></a>
+          </div>
+        </div>
+
+
       </div>
+
     </div>
     {/* {slices.map((slice, key) => (
       <React.Fragment key={key}>
@@ -71,6 +69,21 @@ export default function Home({ data }) {
 
 export const query = graphql`
  query HomepageQuery {
+              allPrismicSidraartesanalBodyNavbar {
+                edges {
+                  node {
+                    slice_type
+                    items {
+                      label_link {
+                        text
+                      }
+                      link {
+                        text
+                      }
+                    }
+                  }
+                }
+              }
               prismicHome{
               data {
               body1 {

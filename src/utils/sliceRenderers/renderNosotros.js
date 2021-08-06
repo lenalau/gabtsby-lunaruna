@@ -8,7 +8,7 @@ export default function Nosotros(primary, items) {
     const text = primary?.text?.text
 
     return (
-        <div id={primary?.nav_item.text} className="w-screen bg-white">
+        <div id="nosotros" className="w-screen bg-white">
             <div className="mx-auto py-12 md:py-20 w-4/5">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 pb-6 md:pb-12">{title}</h1>
                 {/* <div className="bienvenido pb-6 md:pb-12 lg:pb-20"> */}
