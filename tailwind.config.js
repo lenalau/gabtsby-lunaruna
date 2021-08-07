@@ -26,7 +26,8 @@ module.exports = {
       },
       maxWidth: {
         design: '1200px',
-        small: '87%'
+        small: '87%',
+        extended: '1400px'
       }
     }
   },

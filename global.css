@@ -137,3 +137,55 @@ div.sticky {
 div.stickyMenu {
   margin-top: 2vh;
 }
+
+.colorTrans {
+  position: relative;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  /* text-decoration: underline; */
+  overflow: hidden;
+}
+
+.colorTrans::before {
+  position: absolute;
+  content: attr(data-content);
+  top: 0;
+  left: 0;
+  width: 0;
+  /* height: 0; */
+  color: #f6f180;
+  /* text-decoration: underline; */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 700ms ease;
+}
+
+.colorTrans:hover::before {
+  width: 100%;
+}
+
+.colorTransGreen {
+  position: relative;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  /* text-decoration: underline; */
+  overflow: hidden;
+}
+
+.colorTransGreen::before {
+  position: absolute;
+  content: attr(data-content);
+  top: 8px;
+  left: 16px;
+  width: 0;
+  /* height: 0; */
+  color: #68bc45;
+  /* text-decoration: underline; */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 500ms ease;
+}
+
+.colorTransGreen:hover::before {
+  width: 100%;
+}
