@@ -129,7 +129,7 @@ ul li a {
 
 div.sticky {
   position: sticky;
-  top: 20vh;
+  top: 90vh;
   right: 0;
   height: 0vh;
 }
@@ -137,7 +137,7 @@ div.sticky {
 @media all and (max-width: 770px) {
   div.sticky {
     position: sticky;
-    top: 5vh;
+    top: 8vh;
     right: 0;
     height: 0vh;
   }

@@ -33,8 +33,8 @@ const SidraArtesanal = ({ data }) => {
         <div className="w-screen">
             <div className="flex justify-end sticky">
 
-                <div className="flex flex-col items-end">
-                    <div className="bg-green-apple bg-opacity-60 px-2 md:px-4 flex flex-col items-center pb-4 mr-2 md:mr-4 rounded-md">
+                <div className="flex flex-col lg:flex-col-reverse items-end">
+                    <div className="bg-green-apple bg-opacity-60 px-2 md:px-4 flex flex-col items-center pb-4 mr-2 md:mr-4 lg:mt-4 rounded-md">
                         {navOpen ? (<Link to="#" onClick={() => toggleNav()}>
                             <img src={arrowUp} width="25px" className="p-1 my-2" alt="Arrow Up" />
                         </Link>) : (<Link to="#" >
@@ -67,7 +67,7 @@ const SidraArtesanal = ({ data }) => {
                     <div
                         className={clsx({
                             hidden: !navOpen,
-                            'block shadow-mobileMenu mt-4': navOpen
+                            'block shadow-mobileMenu mt-4 md:mr-4': navOpen
                         })}
                     >
                         <div className="block bg-green-apple md:bg-opacity-60 p-6 rounded-md">

@@ -26,35 +26,38 @@ export default function NavBar(primary, items) {
                     alt={imageAlt}
                 >
                     {/* <img src={image} alt={imageAlt} /> */}
-                    <div className="h-4"></div>
-                    <div className="justify-end pr-20 mx-auto space-x-2 h-20 navbar flex flex-row">
-                        {items.map((item, i) => {
-                            return (<div>
-                                { item.label_link.text !== 'PUNTOS DE VENTA' ? (
-                                    <div>
+                    <div className="max-w-small md:max-w-design mx-auto md:w-5/6">
+                        <div className="h-4"></div>
 
-                                        <a key={i}
-                                            data-content={item.label_link.text}
-                                            className="pb-4  pr-8 h-full colorTrans font-semibold"
-                                            // className="py-2 px-4 bg-yellow-50 bg-opacity-60 text-white rounded-lg "
-                                            href={`${item.link.text}`}>{item.label_link.text}</a >
+                        <div className="justify-end space-x-2 h-20 navbar flex flex-row">
+                            {items.map((item, i) => {
+                                return (<div>
+                                    { item.label_link.text !== 'PUNTOS DE VENTA' ? (
+                                        <div>
+
+                                            <a key={i}
+                                                data-content={item.label_link.text}
+                                                className="pb-4  pr-8 h-full colorTrans font-semibold"
+                                                // className="py-2 px-4 bg-yellow-50 bg-opacity-60 text-white rounded-lg "
+                                                href={`${item.link.text}`}>{item.label_link.text}</a >
 
 
 
-                                    </div>
-                                ) : (
+                                        </div>
+                                    ) : (
 
-                                    <div>
-                                        <a
-                                            // data-content={item.label_link.text}
-                                            // className="pb-4 pt-21 px-4 h-full text-white"
-                                            className="py-2 px-4 text-white hover:text-green-apple bg-yellow-50 bg-opacity-60 font-bold rounded-lg hover:bg-opacity-100"
-                                            href={`${item.link.text}`}>{item.label_link.text}</a >
-                                    </div>)
-                                }</div>
+                                        <div>
+                                            <a
+                                                // data-content={item.label_link.text}
+                                                // className="pb-4 pt-21 px-4 h-full text-white"
+                                                className="py-2 px-4 text-white hover:text-green-apple bg-yellow-50 bg-opacity-60 font-bold rounded-lg hover:bg-opacity-100"
+                                                href={`${item.link.text}`}>{item.label_link.text}</a >
+                                        </div>)
+                                    }</div>
 
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>
