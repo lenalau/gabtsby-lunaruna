@@ -129,9 +129,18 @@ ul li a {
 
 div.sticky {
   position: sticky;
-  top: 48vh;
+  top: 20vh;
   right: 0;
   height: 0vh;
+}
+
+@media all and (max-width: 770px) {
+  div.sticky {
+    position: sticky;
+    top: 5vh;
+    right: 0;
+    height: 0vh;
+  }
 }
 
 div.stickyMenu {
@@ -188,4 +197,8 @@ div.stickyMenu {
 
 .colorTransGreen:hover::before {
   width: 100%;
+}
+
+.active {
+  color: #f6f180;
 }

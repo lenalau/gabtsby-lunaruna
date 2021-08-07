@@ -4,9 +4,9 @@ export default function Ofertas(primary, items) {
 
 
     return (
-        <div id={primary?.nav_item.text} className="w-screen bg-white">
+        <div className="w-screen bg-white">
             <div className="mx-auto py-12 md:py-20 w-4/5">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150">{primary?.title.text}</h1>
+                <h1 id={primary?.nav_item.text} className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150">{primary?.title.text}</h1>
                 <div>{primary?.text.text}</div>
                 <div className="grid md:justify-items-end">
                     <div className=" my-12 md:my-20 flex flex-col md:flex-row md:space-x-12">

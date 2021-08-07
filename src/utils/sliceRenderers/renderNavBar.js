@@ -27,7 +27,7 @@ export default function NavBar(primary, items) {
                 >
                     {/* <img src={image} alt={imageAlt} /> */}
                     <div className="h-4"></div>
-                    <div className="justify-end pr-20 mx-auto space-x-4 h-20 navbar flex flex-row">
+                    <div className="justify-end pr-20 mx-auto space-x-2 h-20 navbar flex flex-row">
                         {items.map((item, i) => {
                             return (<div>
                                 { item.label_link.text !== 'PUNTOS DE VENTA' ? (

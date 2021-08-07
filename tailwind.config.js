@@ -28,6 +28,9 @@ module.exports = {
         design: '1200px',
         small: '87%',
         extended: '1400px'
+      },
+      boxShadow: {
+        mobileMenu: '0 8px 16px rgba(10,10,10,.1)'
       }
     }
   },
