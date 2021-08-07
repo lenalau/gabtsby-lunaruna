@@ -6,8 +6,8 @@ export default function Recetas(primary, items) {
 
 
     return (
-        <div>
-            <div className="mx-auto py-12 md:py-20 w-4/5">
+        <div className="max-w-small md:max-w-design mx-auto">
+            <div className="md:mx-auto md:w-5/6  py-12 md:py-20">
                 <h1 id="recetas" className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150">{primary?.title.text}</h1>
 
                 <div className="grid md:justify-items-end">

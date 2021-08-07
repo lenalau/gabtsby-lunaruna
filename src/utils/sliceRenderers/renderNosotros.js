@@ -7,9 +7,9 @@ export default function Nosotros(primary, items) {
     const subtitle = primary?.subtitle?.text
     const text = primary?.text?.text
 
-    return (
-        <div className="w-screen bg-white">
-            <div className="mx-auto py-12 md:py-20 w-4/5">
+    return (<div className="bg-white w-full">
+        <div className="max-w-small md:max-w-design mx-auto bg-white">
+            <div className="md:mx-auto md:w-4/5 py-12 md:py-20">
                 <h1 id="nosotros" className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150 pb-6 md:pb-12">{title}</h1>
                 {/* <div className="bienvenido pb-6 md:pb-12 lg:pb-20"> */}
                 {/* <img src={image} alt={imageAlt} className="w-screen" /> */}
@@ -41,6 +41,6 @@ export default function Nosotros(primary, items) {
 
             </div>
         </div>
-
+    </div>
     )
 }

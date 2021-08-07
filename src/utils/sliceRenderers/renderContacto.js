@@ -6,9 +6,9 @@ export default function Contacto(primary, items) {
     // const map = primary?.map?.url
     // const mapAlt = primary?.map?.alt
 
-    return (
-        <div id={primary?.nav_item.text} className="w-screen bg-black-800">
-            <div className="mx-auto py-12 md:py-20 w-4/5">
+    return (<div className="bg-black-800">
+        <div id={primary?.nav_item.text} className="max-w-small md:max-w-design mx-auto">
+            <div className="md:mx-auto md:w-5/6 py-12 md:py-20">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-150">{primary?.title.text}</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2">
@@ -47,5 +47,6 @@ export default function Contacto(primary, items) {
                 </div>
             </div>
         </div>
+    </div>
     )
 }
