@@ -19,6 +19,9 @@ module.exports = {
         },
         green: {
           apple: '#68bc45'
+        },
+        red: {
+          alert: '#c96e39'
         }
       },
       spacing: {
