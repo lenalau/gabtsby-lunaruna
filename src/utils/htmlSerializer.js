@@ -37,13 +37,13 @@ const htmlSerializer = (className, classObject) => {
 
             case Elements.oList:
                 return (
-                    <ol key={key} className={`${className} list-decimal ml-8 mt-2 mb-4`} >
+                    <ol key={key} className={`${className} list-decimal ml-4 mt-2 mb-4`} >
                         {children}
                     </ol>)
 
             case Elements.oListItem:
                 return (
-                    <li key={key} className={`${className} pl-4`}>
+                    <li key={key} className={`${className}`}>
                         {children}
                     </li>)
 

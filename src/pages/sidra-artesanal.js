@@ -426,6 +426,10 @@ export const query = graphql`
                 title {
                     text
                 }
+                ingredients {
+                    text
+                    raw
+                }
                 text {
                   text
                   raw

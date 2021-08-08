@@ -28,7 +28,7 @@ module.exports = {
         '21': '21px'
       },
       maxWidth: {
-        design: '1200px',
+        design: '1100px',
         small: '87%',
         extended: '1400px'
       },
